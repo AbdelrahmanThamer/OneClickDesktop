@@ -236,7 +236,7 @@ function install_guacamole_ubuntu_debian
 		apt-get install libjpeg-turbo8-dev language-pack-ja language-pack-zh* language-pack-ko -y
 	fi
 	wget $GUACAMOLE_DOWNLOAD_LINK
-	tar zxf guacamole-server-${GUACAMOLE_VERSION}.tar.gz
+	tar -xzf guacamole-server-${GUACAMOLE_VERSION}.tar.gz
 	rm -f guacamole-server-${GUACAMOLE_VERSION}.tar.gz
 	cd $CurrentDir/guacamole-server-$GUACAMOLE_VERSION
 	echo "Start building Guacamole Server from source..."
