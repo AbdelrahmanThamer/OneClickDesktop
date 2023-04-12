@@ -21,7 +21,7 @@
 
 
 
-GUACAMOLE_DOWNLOAD_LINK="https://apache.org/dyn/closer.lua/guacamole/1.5.0/source/guacamole-server-1.5.0.tar.gz"
+GUACAMOLE_DOWNLOAD_LINK="https://raw.githubusercontent.com/AbdelrahmanThamer/OneClickDesktop/master/guacamole-server-1.5.0.zip"
 GUACAMOLE_VERSION="1.5.0"
 
 #By default, this script only works on Ubuntu 18/20, Debian 10, and CentOS 7/8.
@@ -302,8 +302,8 @@ function install_guacamole_centos
 	fi
 	install_tomcat9_centos
 	wget $GUACAMOLE_DOWNLOAD_LINK
-	tar zxf guacamole-server-${GUACAMOLE_VERSION}.tar.gz
-	rm -f guacamole-server-${GUACAMOLE_VERSION}.tar.gz
+	unzip guacamole-server-${GUACAMOLE_VERSION}.zip
+	rm -f guacamole-server-${GUACAMOLE_VERSION}.zip
 	cd $CurrentDir/guacamole-server-$GUACAMOLE_VERSION
 	echo "Start building Guacamole Server from source..."
 	./configure --with-init-dir=/etc/init.d
